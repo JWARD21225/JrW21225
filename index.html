@@ -14,6 +14,16 @@
     opacity: 1;
     transform: translateY(0);
   }
+    
+  }@keyframes fadeLiftIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
   }
   body {
   font-family: Georgia, serif;
@@ -37,7 +47,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* <-- softer shadow */
   /* ✨ Fade-in effect */
   opacity: 0;
-  animation: fadeIn 1.2s ease-in-out forwards;
+  animation: fadeLiftIn 1.2s ease-in-out forwards;
 }
     .overlay h1,
 .overlay h2 {
