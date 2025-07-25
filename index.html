@@ -5,7 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>In Loving Memory</title>
   <style>
-  
+  @keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
   body {
   font-family: Georgia, serif;
   background: url('ozzy-background.jpeg');
@@ -81,13 +90,15 @@ button:hover {
 }
 
     .entry {
-  background-color: rgba(255, 255, 255, 0.85); /* translucent white */
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 20px;
   margin-bottom: 20px;
-  border-left: 4px solid #4caf50; /* match button color */
+  border-left: 4px solid #4caf50;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: slideFadeIn 1s ease-in-out;
+  animation-fill-mode: both;
+    }
 
     .entry p {
   margin: 5px 0;
