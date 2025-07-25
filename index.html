@@ -16,7 +16,14 @@
     color: #ffffff;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
   }
-
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
     h1, h2 {
       text-align: center;
       color: #333;
@@ -77,21 +84,23 @@
 </head>
 <body>
 
+<div class="overlay">
   <h1>In Loving Memory of Ozzy Osbourne</h1>
-<div class="subtitle">Share a memory, prayer, or message to celebrate his life and legacy.</div>
+  <p>Share a memory, prayer, or message to celebrate his life and legacy.</p>
 
   <form id="guestForm">
     <label for="name">Your Name</label>
-    <input type="text" id="name" placeholder="Jane Smith" required />
+    <input type="text" id="name" placeholder="Jane Smith" />
 
     <label for="location">Your City/State (optional)</label>
     <input type="text" id="location" placeholder="Atlanta, GA" />
 
     <label for="message">Your Message</label>
-    <textarea id="message" rows="4" placeholder="Share a memory, prayer, or kind words..." required></textarea>
+    <textarea id="message" rows="4" placeholder="Share a memory, prayer, or kind words..."></textarea>
 
     <button type="submit">Submit Message</button>
   </form>
+</div>
 
   <div id="entries"></div>
 
